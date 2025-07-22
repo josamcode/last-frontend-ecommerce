@@ -93,10 +93,7 @@ const Profile = () => {
         <main className="max-w-7xl mx-auto px-6 py-12 pb-24">
             {/* Page Header */}
             <div className="text-center mb-12">
-                <Title title={`Welcome back, ${user.username.split(" ")[0]}!`} className="mb-0" />
-                <p className="text-lg text-gray-600">
-                    Here’s your account overview.
-                </p>
+                <Title title={`Welcome back, ${user.username.split(" ")[0]}!`} subtitle="Here’s your account overview." />
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -172,7 +169,7 @@ const Profile = () => {
                 <div className="lg:col-span-2 space-y-8">
                     <div className="flex justify-between items-center">
                         <h2 className="text-2xl font-semibold text-gray-800">Recent Orders</h2>
-                        <Link to="/orders" className="text-primary hover:text-indigo-700 text-sm font-medium">
+                        <Link to="/profile" className="text-primary hover:text-indigo-700 text-sm font-medium">
                             View All ({orders.length})
                         </Link>
                     </div>

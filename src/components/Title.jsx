@@ -12,7 +12,7 @@ export default function Title({
             <h2 className={`text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold ${textColor}`}>
                 {title}
             </h2>
-            {subtitle && <p className={subtitleClass}>{subtitle}</p>}
+            {subtitle && <p className={`${subtitleClass}`}>{subtitle}</p>}
         </div>
     );
 }

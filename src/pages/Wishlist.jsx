@@ -106,10 +106,7 @@ export default function Wishlist() {
         return (
             <div className="max-w-7xl mx-auto flex flex-col items-center justify-center py-44 pb-32 text-center px-6">
                 <HeartIcon className="w-20 h-20 text-red-100 mb-6" />
-                <Title title="Your Wishlist is Empty" className="mb-0" />
-                <p className="text-gray-500 mt-3 mb-6 max-w-md">
-                    Save your favorite items to come back later. Click the heart icon on any product!
-                </p>
+                <Title title="Your Wishlist is Empty" subtitle="Save your favorite items to come back later. Click the heart icon on any product!" />
                 {/* <GradientButton onClick={() => navigate("/shop")}>
                     Start Shopping
                 </GradientButton> */}
@@ -120,8 +117,7 @@ export default function Wishlist() {
     return (
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="mb-10 text-center">
-                <Title title="Your Wishlist" className="mb-0" />
-                <p className="text-gray-500 mt-2">{wishlist.items.length} item(s) saved</p>
+                <Title title="Your Wishlist" subtitle={`${wishlist.items.length} item(s) saved`} />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

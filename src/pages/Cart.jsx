@@ -143,11 +143,7 @@ export default function CartPage() {
                         />
                     </svg>
                 </div>
-                <Title title="Your Cart is Empty" className="mb-0" />
-
-                <p className="text-gray-500 mt-3 mb-6 max-w-md">
-                    Looks like you haven't added any items yet. Start shopping to fill your cart!
-                </p>
+                <Title title="Your Cart is Empty" subtitle="Looks like you haven't added any items yet. Start shopping to fill your cart!" />
                 <button
                     onClick={() => navigate("/shop")}
                     className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium rounded-full hover:from-purple-600 hover:to-indigo-500 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
