@@ -1,70 +1,195 @@
-# Getting Started with Create React App
+# JOSAM Fashion Store - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-19.1.0-blue.svg)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.17-38B2AC.svg)
+![React Router](https://img.shields.io/badge/React_Router-7.7.0-CA472F.svg)
+![Axios](https://img.shields.io/badge/Axios-1.10.0-5A29E4.svg)
 
-## Available Scripts
+JOSAM is a modern, responsive e-commerce frontend for a fast-growing menswear fashion brand based in Egypt. Built with React, Tailwind CSS, and React Router, it offers a seamless shopping experience with features like product browsing, cart management, user authentication, order tracking, and career applications.
 
-In the project directory, you can run:
+## 🌟 Features
 
-### `npm start`
+- **Responsive Design**: Fully mobile-friendly interface using Tailwind CSS
+- **User Authentication**: Login and registration system with JWT token management
+- **Product Management**: Browse, view details, and add items to cart or wishlist
+- **Shopping Cart**: Full cart functionality with quantity adjustment and price calculation
+- **Checkout Process**: Multi-step checkout with shipping information and order summary
+- **Order Tracking**: Track orders by ID with visual status indicators
+- **User Profile**: View account info, order history, and messages
+- **Career Applications**: Apply for open positions with file upload (resume)
+- **Messaging System**: User inbox with read/unread status and notifications
+- **Help Center**: FAQ section and customer support contact form
+- **SEO-Friendly Routes**: Properly structured routing for all pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend Framework**: [React 19.1.0](https://react.dev/)
+- **Styling**: [Tailwind CSS 3.4.17](https://tailwindcss.com/)
+- **Routing**: [React Router DOM 7.7.0](https://reactrouter.com/)
+- **HTTP Client**: [Axios 1.10.0](https://axios-http.com/)
+- **State Management**: React Hooks (useState, useEffect)
+- **Authentication**: JWT tokens stored in cookies (js-cookie)
+- **UI Components**: Custom components with React and Tailwind
+- **Icons**: react-icons and Heroicons
+- **Toast Notifications**: react-hot-toast
+- **Form Validation**: HTML5 validation + custom JavaScript
 
-### `npm test`
+## 📁 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
 
-### `npm run build`
+src/
+├── components/ # Reusable UI components
+├── pages/ # Page-level components
+├── utils/ # Utility functions (Toast notifications)
+├── App.js # Main application component with routing
+├── index.js # Entry point
+└── styles/
+└── index.css # Tailwind imports and global styles
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔧 Installation & Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation Steps
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/your-username/josam-frontend.git
+cd josam-frontend
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies:**
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Create a `.env` file** in the root directory with your API URL:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```env
+REACT_APP_API_URL=http://localhost:5000
+```
 
-### Code Splitting
+4. **Start the development server:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+5. **Open your browser** and navigate to [http://localhost:3000](http://localhost:3000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Environment Variables
 
-### Making a Progressive Web App
+Create a `.env` file in the root directory with the following variables:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Variable            | Description          | Example                 |
+| ------------------- | -------------------- | ----------------------- |
+| `REACT_APP_API_URL` | Backend API base URL | `http://localhost:5000` |
 
-### Advanced Configuration
+## 🚀 Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+# Start development server
+npm start
 
-### Deployment
+# Run tests
+npm test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Build for production
+npm run build
 
-### `npm run build` fails to minify
+# Eject from Create React App (not recommended)
+npm run eject
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🌐 API Integration
+
+This frontend is designed to work with a backend API. The following endpoints are used:
+
+- Authentication: `/api/auth/login`, `/api/auth/register`
+- Products: `/api/products`
+- Orders: `/api/orders`
+- Users: `/api/users/profile`
+- Careers: `/api/careers/apply`
+- Messages: `/api/messages`
+
+Ensure your backend server is running and accessible at the URL specified in `REACT_APP_API_URL`.
+
+## 🎨 Design System
+
+- **Primary Color**: Indigo (`#4f46e5`)
+- **Typography**: System font stack with responsive sizing
+- **Spacing**: Tailwind's spacing scale (4px base)
+- **Shadows**: Custom shadow levels for depth
+- **Border Radius**: Consistent rounded corners (xl: 0.75rem, 2xl: 1rem)
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: Up to 640px
+- **Tablet**: 640px - 1024px
+- **Desktop**: 1024px and above
+
+The application uses a mobile-first approach with responsive layouts that adapt to different screen sizes using Tailwind's responsive prefixes.
+
+## 📝 Key Functionalities
+
+### Authentication Flow
+
+- Users can register and log in
+- JWT tokens are stored in cookies with 7-day expiration
+- Protected routes redirect to login if unauthenticated
+
+### Shopping Experience
+
+- Product browsing with search and filtering
+- Detailed product views with image galleries
+- Add to cart and wishlist functionality
+- Cart management with quantity updates
+
+### Checkout Process
+
+- Shipping information form with validation
+- Order summary with price calculation
+- Multiple payment options (currently Cash on Delivery)
+- Order confirmation page
+
+### User Dashboard
+
+- Profile information viewing
+- Order history with status tracking
+- Message inbox with notification badges
+- Account settings
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit issues or pull requests.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🧑‍💻 Developed By
+
+[Gerges Samuel @josamcode]  
+Frontend & Backend Developer
+
+---
+
+> 💡 Tip: You can expand this backend with payment gateway integration (e.g., Stripe, PayPal), search & filtering enhancements, and caching (e.g., Redis) for better performance.
+
+---
