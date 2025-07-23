@@ -92,7 +92,8 @@ export default function MyMessages() {
 
         {messages.length === 0 ? (
           <div className="text-center py-16 bg-gray-50 rounded-xl">
-            <FaBell className="h-5 w-5" />
+          {/* update this icon */}
+            <FaBell className="h-12 w-12 m-auto" />
             <h3 className="text-lg font-medium text-gray-700 mt-4">No messages yet</h3>
             <p className="text-gray-500 mt-2">You haven't received any messages from admins or the system.</p>
           </div>
