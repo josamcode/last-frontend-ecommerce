@@ -77,7 +77,7 @@ export default function HomePage() {
         className="relative h-screen flex items-center justify-center text-center px-6 bg-fixed bg-center bg-cover"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1470&auto=format&fit=crop')",
+            "url('https://images.unsplash.com/photo-1637666544359-0e88de7b3206?q=80&w=1470&auto=format&fit=crop')",
           // "url('https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1470&q=80')",
         }}
       >
