@@ -21,7 +21,6 @@ import HelpCenter from "./pages/HelpCenter";
 import ReturnPolicy from "./pages/ReturnPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
-import Careers from "./pages/Careers";
 import ContactPage from "./pages/Contact";
 import MyMessages from "./pages/MyMessages";
 
@@ -33,6 +32,7 @@ function App() {
       <Toaster />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/products/:id" element={<ProductPage />} />

@@ -6,12 +6,13 @@ import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid";
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    phone: "",
+    identifier: "",
     countryCode: "+2",
     password: "",
   });
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
+  const [isUsingPhone, setIsUsingPhone] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -24,12 +25,16 @@ const Login = () => {
     setError(null);
 
     try {
-      const fullPhone = formData.countryCode + formData.phone;
+      let loginIdentifier = formData.identifier;
+
+      if (isUsingPhone) {
+        loginIdentifier = formData.countryCode + formData.identifier;
+      }
 
       const res = await axios.post(
         `${process.env.REACT_APP_API_URL}/auth/login`,
         {
-          phone: fullPhone,
+          identifier: loginIdentifier,
           password: formData.password,
         }
       );
@@ -50,34 +55,43 @@ const Login = () => {
           Login to Your Account
         </h2>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+
+        {/* <div className="flex items-center justify-center mb-4">
+          <button
+            type="button"
+            onClick={() => setIsUsingPhone(true)}
+            className={`px-4 py-2 rounded-l-md ${isUsingPhone ? 'bg-primary text-white' : 'bg-gray-200'}`}
+          >
+            Phone
+          </button>
+          <button
+            type="button"
+            onClick={() => setIsUsingPhone(false)}
+            className={`px-4 py-2 rounded-r-md ${!isUsingPhone ? 'bg-primary text-white' : 'bg-gray-200'}`}
+          >
+            Email
+          </button>
+        </div> */}
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Phone
+              {/* {isUsingPhone ? "Phone" : "Email"} */}
+              Email
             </label>
-            <div className="flex gap-2">
-              <select
-                name="countryCode"
-                value={formData.countryCode}
-                onChange={handleChange}
-                className="border rounded-md p-2 bg-white"
-              >
-                <option value="+2">+2 (EG)</option>
-                <option value="+1">+1 (US)</option>
-                <option value="+44">+44 (UK)</option>
-                <option value="+91">+91 (IN)</option>
-              </select>
+            {!isUsingPhone && (
               <input
-                type="tel"
-                name="phone"
-                placeholder="012xxxxxxxx"
-                value={formData.phone}
+                type="email"
+                name="identifier"
+                placeholder="you@example.com"
+                value={formData.identifier}
                 onChange={handleChange}
                 required
-                className="flex-1 p-2 border rounded-md focus:ring-2 focus:ring-indigo-500"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-indigo-500"
               />
-            </div>
+            )}
           </div>
+
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Password

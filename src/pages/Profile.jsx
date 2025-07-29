@@ -252,7 +252,7 @@ const Profile = () => {
                                             <img
                                                 key={item._id}
                                                 src={`${process.env.REACT_APP_API_URL}/public/images/products/${item.image}`}
-                                                alt={item.productId?.title || "Product"}
+                                                alt={item.name || "Product"}
                                                 className="w-12 h-12 object-cover rounded-lg flex-shrink-0"
                                                 onError={(e) => {
                                                     e.target.src = "/images/fallback-product.png";

@@ -119,14 +119,14 @@ const OrderConfirmation = () => {
                                 <div key={item._id} className="flex gap-4 pt-6 first:pt-0">
                                     <img
                                         src={`${process.env.REACT_APP_API_URL}/public/images/products/${item.image}`}
-                                        alt={item.productId?.title || "Product"}
+                                        alt={item.name || "Product"}
                                         className="w-20 h-20 object-cover rounded-lg"
                                         onError={(e) => {
                                             e.target.src = "/images/fallback-product.png";
                                         }}
                                     />
                                     <div className="flex-1">
-                                        <h3 className="font-medium text-gray-900">{item.productId?.title || "Product"}</h3>
+                                        <h3 className="font-medium text-gray-900">{item.name || "Product"}</h3>
                                         <p className="text-gray-600 text-sm">
                                             Size: <span className="capitalize">{item.size}</span>, Color:{" "}
                                             <span className="capitalize">{item.color}</span>
