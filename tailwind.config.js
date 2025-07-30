@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         primary: "#4f46e5",
       },
+      fontFamily: {
+        kanit: ["Kanit", "sans-serif"],
+      },
       backgroundImage: {
         "gradient-primary": "linear-gradient(to right, #4f46e5, #4338ca)",
       },

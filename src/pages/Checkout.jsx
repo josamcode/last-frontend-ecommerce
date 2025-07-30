@@ -351,7 +351,7 @@ const CheckoutPage = () => {
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             Coupon Code
                         </label>
-                        <div className="flex gap-2">
+                        <div className="flex flex-col sm:flex-row gap-2">
                             <input
                                 type="text"
                                 value={couponCode}

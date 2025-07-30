@@ -77,7 +77,7 @@ const Register = () => {
               <label className="block text-sm font-medium text-gray-700">
                 Phone
               </label>
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <select
                   name="countryCode"
                   value={formData.countryCode}
